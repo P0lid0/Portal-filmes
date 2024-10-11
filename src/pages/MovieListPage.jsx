@@ -32,24 +32,13 @@ export default function MovieListPage() {
                 value={search}
                 onChange={handleSearch}
             />
-            {/* <section className="flex">
-                {
-                    filmesFiltrados.length > 0 ?
-
-                        filmesFiltrados
-                            .map(filme => (
-                                <MovieCard key={filme.id} {...filme} />
-                            ))
-                        :
-                        <p> Filme não encontrado</p>
-                }
-            </section> */}
+            
             <section>
                 {
                     filmes.map(filme => 
                         <>
                         <h1>{filme.title}</h1>
-                        <img src= {`https://image.tmdb.org/t/p/w92${filme.poster_path}`}/>
+                        <img src= {`https://image.tmdb.org/t/p/w185${filme.poster_path}`}/>
                         <img src= {`https://image.tmdb.org/t/p/w1280${filme.backdrop_path}`}/>
                         <h1>{filme.overview}</h1>
                         </>

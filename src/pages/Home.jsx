@@ -1,20 +1,31 @@
 import CardContainer from "../components/CardContainer";
+import { useState, useEffect } from "react"
 import MovieCard from "../components/MovieCard";
-import movies from "../data/movies.json";
+import Carrosel from "../components/Carrosel"
 export default function Home() {
 
     return (
-        <>
-            <CardContainer titulo="Filmes antigos">
-                {
-                    movies
-                        .filter(filme => (filme.ano_lancamento < 2000))
-                        .map(filme => (
-                            <MovieCard key={filme.id} {...filme} />
-                        ))
-                }
-            </CardContainer>
+        <Carrosel/>
 
-        </>
+        // <>
+        //     <CardContainer titulo="Filmes Populares">
+        //         <div>
+                   
+        //                 <>
+        //                     <MovieCard/> 
+        //                 </>
+                        
+                    
+                            
+                    
+        //         </div>
+               
+                   
+                
+        //     </CardContainer>
+
+        // </>
+        
+
     )
 }
