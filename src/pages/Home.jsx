@@ -27,6 +27,13 @@ export default function Home() {
   const handleMouseLeave = () => {
     setIsDragging(false);
   };
+  
+  if(!localStorage.getItem("verDepois")){
+    localStorage.setItem("verDepois", JSON.stringify([]))
+  }
+  if(!localStorage.getItem("assistidos")){
+    localStorage.setItem("assistidos", JSON.stringify([]))
+  }
 
   return (
     <>
